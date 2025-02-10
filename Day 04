@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Table</title>
+</head>
+<body>
+
+    <h2>Student Scores using Table</h2>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Score</th>
+        </tr>
+        <tr>
+            <td>Allyza</td>
+            <td>Math</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>Remar</td>
+            <td>Math</td>
+            <td>91</td>
+        </tr>
+        <tr>
+            <td colspan="2">Average Score</td>

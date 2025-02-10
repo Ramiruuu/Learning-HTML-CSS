@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    <form>
+        <main style="background-color:tomato; border: 5px dotted cyan; border-radius: 20px; border-bottom: 5px solid cyan; border-top: 5px solid cyan;">
+        <h5 style="text-align:center; border: 2px solid blue; padding: 5px; border-radius: 15px; background-color: cyan;"> Sign Up</h5>
+        
+        <label for="username2" style="font-size:12px;">Username:</label>
+        <input type="username" id="username2" placeholder="Enter username" required=""><br>
+        
+        <label for="password" style="font-size:12px;">Password:</label>
+        <input type="password" id="password" placeholder="Enter password" required=""><br>
+        
+        <label for="passwordconfirm" style="font-size:12px;">Confirm Password:</label>
+        <input type="password" id="email" placeholder="username@gmail.com" required=""><br> 
+        
+        <label style="font-size: 12px;" for="clasification">Gender:</label>
+          <select id="clasification">
+            <option> Male </option>
+            <option> Female </option>
+            <option> None or the above</option>
+          </select><br>
+        
+        <label for="age" style="font-size:12px;">Age:</label>
+        <input type="number" id="age" placeholder="Enter age" required=""><br>
+          
+          
+          <div>
+          <input style="border-radius: 10px; background-color: cyan;"type="submit">
+          <input style="border-radius: 10px; background-color: cyan; "type="reset">
+          </div>
+        </main>
+      
+      
+    </form>
+  </h>
+</body>
+</html>

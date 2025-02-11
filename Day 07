@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>All About Navigation Bar</title>
+  <link rel="stylesheet" href="navigation.css">
+  
+</head>
+<body>
+  <nav class="navBar">
+    <ul>
+      <li><a href="#"> Home </a></li>
+      <li><a href="#"> Testimonials </a></li>
+      <li><a href="#"> About Us </a></li>
+      <li><a href="#"> Contact Us</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

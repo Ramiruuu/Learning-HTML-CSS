@@ -1,0 +1,89 @@
+---Html---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine Proposal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Will you be my Valentine?</h1>
+    <button class="yes-button">Yes</button>
+    <button class="no-button">No</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+----Css---
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffe6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #ff66b3;
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.cute-image {
+  max-width: 200px;
+  margin: 20px 0;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff66b3;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.back-button:hover {
+  background: #ff3385;
+}
+
+
+----javascript--
+const messages = ["Really sure??", "Absolutely sure??", "No backing out now!"];
+let messageIndex = 0;
+
+function handleNoClick() {
+  const noButton = document.querySelector(".no-button");
+  noButton.textContent = messages[messageIndex];
+  messageIndex = (messageIndex + 1) % messages.length;
+
+  const yesButton = document.querySelector(".yes-button");
+  const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+  yesButton.style.fontSize = `${currentSize * 1.5}px`;
+}
+
+function handleYesClick() {
+  window.location.href = "yes_page.html";
+}
+
+document.querySelector(".no-button").addEventListener("click", handleNoClick);
+document.querySelector(".yes-button").addEventListener("click", handleYesClick);

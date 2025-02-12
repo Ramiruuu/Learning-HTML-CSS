@@ -1,0 +1,94 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Navbar with GSAP</title>
+  <style>
+    /* CSS */
+    body {
+      background-color: #121212;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+
+    nav {
+      position: relative;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      gap: 40px;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    nav li::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: cyan;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    nav li.active::before,
+    nav li:hover::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <!-- HTML Structure -->
+  <nav>
+    <ul>
+      <li class="active"><button>Home</button></li>
+      <li><button>Shop</button></li>
+      <li><button>About</button></li>
+      <li><button>Contact</button></li>
+    </ul>
+  </nav>
+
+  <script>
+    // JavaScript (GSAP for animations)
+    const navLinks = document.querySelectorAll('nav li');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.forEach(el => el.classList.remove('active'));
+        link.classList.add('active');
+        
+        gsap.to('.active::before', {
+          scaleX: 1,
+          duration: 0.5,
+          ease: 'power2.inOut'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
